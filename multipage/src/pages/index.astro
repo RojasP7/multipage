@@ -1,8 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout title="Welcome to Astro." favicon="/fab.png">
-	puto el que lo lea
+	<div class="my-custom-class">
+		puto el que lo lea
+	</div>
+		<span class="font-myfont">hola mundo con mi fuente elegida</span>
+	<Icon name="line-md:upload-loop" class="text-green-600 hover:text-white hover:bg-blue-800 cursor-pointer hover:size-20 size-14 transition-all rounded-full " />
+	<Icon name="simple-icons:riotgames" />
 </Layout>
+<style>
+	.my-custom-class{
+		@apply bg-red-600 text-white text-2xl
+	}
 
+</style>
