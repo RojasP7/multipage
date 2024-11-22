@@ -1,6 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import MyComponent from "../components/vue/MyComponent.vue";
 ---
+
 <Layout title="Quienes somos" favicon="/favicon.svg">
     Esta es la pagina quienes somos
+
+    <MyComponent client:load/>
+    <div id="calendar"></div>
 </Layout>
+<script>
+    import {calendar} from "datedreamer";
+    
+    new calendar({
+        element: document.querySelector("#calendar")
+    });
+    </script>
